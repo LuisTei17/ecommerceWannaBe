@@ -3,5 +3,6 @@ export class OrderDto {
     price: number;
     quantity: number;
     clientCpf: string;
-    cupom: string;
+    cupom: number;
+    finalPrice?: number;
   }

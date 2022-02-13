@@ -14,6 +14,10 @@ export class OrdersController {
 
   @Post()
   async createOrder(@Body() orderDto: OrderDto): Promise<OrderDto> {
-      return this.ordersService.createOrder(orderDto);
+      try {
+        return this.ordersService.createOrder(orderDto);
+      } catch (err) {
+        throw err;
+      }
   }
 }
